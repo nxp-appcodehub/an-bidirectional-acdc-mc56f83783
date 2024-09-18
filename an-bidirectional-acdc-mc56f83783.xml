@@ -1,0 +1,26 @@
+<data:item xmlns:data="data" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="data ../../xsd/alp.xsd" type="app_note" format="projectfile" versionSchema="1.0.0" name="bidirectional-acdc-mc56f83783" uuid="8a2c30b1-360f-4791-a679-efe5165bd328" id="an-bidirectioanl-acdc-mc56f83783">
+    <display_title>
+        AN14354: Multimode bidirectional AC-DC converter design using MC56F83783
+    </display_title>
+    <overview>
+        <![CDATA[This software accompanies application note AN14354, which describes how to design a multimode bidirectional ACDC converter using MC56F83783.]]>
+    </overview>
+    <toolchains>
+        <toolchain name="codewarrior"></toolchain>
+    </toolchains>
+    <families>
+        <family name="dsc"></family>
+    </families>
+    <nxp_compatible_hw>
+        <custom_hw></custom_hw>
+    </nxp_compatible_hw>
+    <peripherals>
+        <peripheral name="adc"></peripheral>
+        <peripheral name="gpio"></peripheral>
+        <peripheral name="pwm"></peripheral>
+        <peripheral name="timer"></peripheral>
+    </peripherals>
+    <categories>
+        <category name="power_conversion"></category>
+    </categories>
+</data:item>

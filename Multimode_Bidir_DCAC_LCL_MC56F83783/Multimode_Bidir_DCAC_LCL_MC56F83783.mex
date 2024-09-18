@@ -1,0 +1,2074 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<configuration name="MC56F83783" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_13 http://mcuxpresso.nxp.com/XSD/mex_configuration_13.xsd" uuid="6fe3ba35-6b6f-46b7-875e-406710e994f2" version="13" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <common>
+      <processor>MC56F83783</processor>
+      <package>MC56F83783VLH</package>
+      <mcu_data>ksdk2_0</mcu_data>
+      <cores selected="core0">
+         <core name="DSP56800EX" id="core0" description="DSP56800EX core"/>
+      </cores>
+      <description>Configuration imported from C:\Users\nxa13833\Desktop\subset_try\tgt\todo\removal\project_template_MC56F83783</description>
+   </common>
+   <preferences>
+      <validate_boot_init_only>true</validate_boot_init_only>
+      <generate_extended_information>false</generate_extended_information>
+      <generate_code_modified_registers_only>false</generate_code_modified_registers_only>
+      <custom_copyright>
+         <text>/*
+ * Copyright 2024 NXP
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */</text>
+         <enabled>true</enabled>
+      </custom_copyright>
+      <update_include_paths>true</update_include_paths>
+      <generate_registers_defines>false</generate_registers_defines>
+   </preferences>
+   <tools>
+      <pins name="Pins" version="13.1" enabled="true" update_project_code="true">
+         <generated_project_files>
+            <file path="board/pin_mux.c" update_enabled="true"/>
+            <file path="board/pin_mux.h" update_enabled="true"/>
+         </generated_project_files>
+         <pins_profile>
+            <processor_version>13.0.2</processor_version>
+            <pin_labels>
+               <pin_label pin_num="41" pin_signal="GPIOF4/TXD1/XB_OUT8/PWMA_0X/PWMA_FAULT6" label="PWM_SR_L" identifier="PWM_SR_L"/>
+               <pin_label pin_num="42" pin_signal="GPIOF5/RXD1/XB_OUT9/PWMA_1X/PWMA_FAULT7" label="PWM_SR_H" identifier="PWM_SR_H"/>
+               <pin_label pin_num="59" pin_signal="GPIOF7/TB3/CMPC_O/XB_IN3" label="SW_N" identifier="relay;SW_N"/>
+               <pin_label pin_num="40" pin_signal="GPIOF3/SDA1/XB_OUT7" label="SW_GRID" identifier="PWM_H;SW_GRID"/>
+               <pin_label pin_num="39" pin_signal="GPIOF2/SCL1/XB_OUT6" label="user_LED2" identifier="PWM_L;TP1;LED2;user_LED2"/>
+               <pin_label pin_num="12" pin_signal="GPIOA4/ANA4/CMPD_IN0" label="current_bus"/>
+               <pin_label pin_num="13" pin_signal="GPIOA0/ANA0/CMPA_IN3/CMPC_O" label="current_P_inv"/>
+               <pin_label pin_num="32" pin_signal="GPIOC7/SS0_B/TXD0/XB_IN8/XB_OUT6" label="user_LED2" identifier="CC_TP2;LED2"/>
+               <pin_label pin_num="34" pin_signal="GPIOC9/SCLK0/XB_IN4/TXD0/XB_OUT8" label="CC_TP4" identifier="CC_TP4"/>
+               <pin_label pin_num="19" pin_signal="GPIOB6/ANB6/CMPB_IN1" label="test_ac" identifier="test_ac"/>
+               <pin_label pin_num="10" pin_signal="GPIOA6/ANA6" label="test_dc" identifier="test_dc"/>
+               <pin_label pin_num="27" pin_signal="GPIOB2/ANB2/VREFHB/CMPC_IN3" label="current_grid"/>
+               <pin_label pin_num="25" pin_signal="GPIOB1/ANB1/CMPB_IN0/DACB_O" label="current_N_inv"/>
+               <pin_label pin_num="20" pin_signal="GPIOB5/ANB5/CMPC_IN2" label="bus voltage"/>
+               <pin_label pin_num="14" pin_signal="GPIOA1/ANA1/CMPA_IN0" label="voltage_load"/>
+               <pin_label pin_num="24" pin_signal="GPIOB0/ANB0/CMPB_IN3" label="temperature"/>
+               <pin_label pin_num="15" pin_signal="GPIOA2/ANA2/VREFHA/CMPA_IN1" label="voltage_grid"/>
+               <pin_label pin_num="16" pin_signal="GPIOA3/ANA3/VREFLA/CMPA_IN2" label="current_capacitor"/>
+               <pin_label pin_num="28" pin_signal="GPIOB3/ANB3/VREFLB/CMPC_IN0" label="voltage bias"/>
+               <pin_label pin_num="21" pin_signal="GPIOB4/ANB4/CMPC_IN1" label="voltage_inverter"/>
+               <pin_label pin_num="58" pin_signal="GPIOF6/TB2/PWMA_3X/PWMB_3X/XB_IN2" label="SW_L" identifier="SW_L"/>
+               <pin_label pin_num="3" pin_signal="GPIOC0/EXTAL/CLKIN0" label="user_LED1" identifier="LED1;user_LED1"/>
+               <pin_label pin_num="4" pin_signal="GPIOC1/XTAL" label="LED_HVP" identifier="LED;LED_HVP"/>
+               <pin_label pin_num="8" pin_signal="GPIOC4/TA1/CMPB_O/XB_IN8/EWM_OUT_B" label="phase_capture" identifier="Tc;T;C;phase_capture"/>
+               <pin_label pin_num="18" pin_signal="GPIOC5/DACA_O/XB_IN7" label="phase_transfer" identifier="C;T;phase_transfer"/>
+               <pin_label pin_num="53" pin_signal="GPIOE6/PWMA_3B/XB_IN4/PWMB_2B/XB_OUT10" label="PWM_TP"/>
+               <pin_label pin_num="36" pin_signal="GPIOF0/XB_IN6/TB2" label="TP40" identifier="TP2;XBAR_TP2;TP40"/>
+               <pin_label pin_num="49" pin_signal="GPIOC13/TA3/XB_IN6/EWM_OUT_B" label="TP38" identifier="TP1;XBAR_TP1;TP38"/>
+               <pin_label pin_num="56" pin_signal="GPIOC15/SCL0/XB_OUT5/PWMA_FAULT5" label="CAN_STB" identifier="STB;STB_CAN;CAN_STB"/>
+               <pin_label pin_num="46" pin_signal="GPIOE1/PWMA_0A/XB_OUT5" label="PWM1" identifier="PWM1"/>
+               <pin_label pin_num="45" pin_signal="GPIOE0/PWMA_0B/XB_OUT4" label="PWM2" identifier="PWM2"/>
+               <pin_label pin_num="48" pin_signal="GPIOE3/PWMA_1A/XB_OUT7" label="PWM3" identifier="PWM3"/>
+               <pin_label pin_num="47" pin_signal="GPIOE2/PWMA_1B/XB_OUT6" label="PWM4" identifier="PWM4"/>
+               <pin_label pin_num="52" pin_signal="GPIOE5/PWMA_2A/XB_IN3/XB_OUT9" label="PWM5" identifier="PWM5"/>
+               <pin_label pin_num="51" pin_signal="GPIOE4/PWMA_2B/XB_IN2/XB_OUT8" label="PWM6" identifier="PWM6"/>
+            </pin_labels>
+            <external_user_signals>
+               <properties/>
+            </external_user_signals>
+         </pins_profile>
+         <functions_list>
+            <function name="BOARD_InitPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>true</callFromInitBoot>
+                  <prefix>BOARD_</prefix>
+                  <coreID>core0</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="Peripheral" resourceId="QSCI1" description="Peripheral QSCI1 is not initialized in the Peripherals tool." problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="PWMA" description="Peripheral PWMA is not initialized in the Peripherals tool." problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="ADC" description="Peripheral ADC is not initialized in the Peripherals tool." problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="CMPA" description="Peripheral CMPA is not initialized in the Peripherals tool." problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="CMPB" description="Peripheral CMPB is not initialized in the Peripherals tool." problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="CMPC" description="Peripheral CMPC is not initialized in the Peripherals tool." problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="Peripheral" resourceId="QSCI0" description="Peripheral QSCI0 is not initialized in the Peripherals tool." problem_level="1" source="Pins:BOARD_InitPins">
+                     <feature name="initialized" evaluation="equal">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.dsc_sim" description="Pins initialization requires the DSC_SIM Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.dsc_gpio" description="Pins initialization requires the DSC_GPIO Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.dsc_xbara" description="Pins initialization requires the DSC_XBARA Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="QSCI1" signal="TXD" pin_num="37" pin_signal="GPIOC11/CANTX/SCL1/TXD1"/>
+                  <pin peripheral="QSCI1" signal="RXD" pin_num="38" pin_signal="GPIOC12/CANRX/SDA1/RXD1"/>
+                  <pin peripheral="PWMA" signal="A, 0" pin_num="46" pin_signal="GPIOE1/PWMA_0A/XB_OUT5">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="PWMA" signal="B, 0" pin_num="45" pin_signal="GPIOE0/PWMA_0B/XB_OUT4">
+                     <pin_features>
+                        <pin_feature name="identifier" value=""/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOE" signal="GPIO, 3" pin_num="48" pin_signal="GPIOE3/PWMA_1A/XB_OUT7">
+                     <pin_features>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOE" signal="GPIO, 2" pin_num="47" pin_signal="GPIOE2/PWMA_1B/XB_OUT6">
+                     <pin_features>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="PWMA" signal="FAULT, 0" pin_num="" pin_signal="CMPA_OUT"/>
+                  <pin peripheral="PWMA" signal="FAULT, 1" pin_num="" pin_signal="CMPB_OUT"/>
+                  <pin peripheral="PWMA" signal="FAULT, 2" pin_num="" pin_signal="CMPC_OUT"/>
+                  <pin peripheral="ADC" signal="SYNC, A" pin_num="" pin_signal="PWMA0_OUT_TRIG0"/>
+                  <pin peripheral="ADC" signal="ANA, 0" pin_num="13" pin_signal="GPIOA0/ANA0/CMPA_IN3/CMPC_O"/>
+                  <pin peripheral="ADC" signal="ANA, 1" pin_num="14" pin_signal="GPIOA1/ANA1/CMPA_IN0"/>
+                  <pin peripheral="ADC" signal="ANA, 2" pin_num="15" pin_signal="GPIOA2/ANA2/VREFHA/CMPA_IN1"/>
+                  <pin peripheral="ADC" signal="ANA, 3" pin_num="16" pin_signal="GPIOA3/ANA3/VREFLA/CMPA_IN2"/>
+                  <pin peripheral="ADC" signal="ANA, 4" pin_num="12" pin_signal="GPIOA4/ANA4/CMPD_IN0"/>
+                  <pin peripheral="ADC" signal="ANB, 0" pin_num="24" pin_signal="GPIOB0/ANB0/CMPB_IN3"/>
+                  <pin peripheral="ADC" signal="ANB, 1" pin_num="25" pin_signal="GPIOB1/ANB1/CMPB_IN0/DACB_O"/>
+                  <pin peripheral="ADC" signal="ANB, 2" pin_num="27" pin_signal="GPIOB2/ANB2/VREFHB/CMPC_IN3"/>
+                  <pin peripheral="ADC" signal="ANB, 3" pin_num="28" pin_signal="GPIOB3/ANB3/VREFLB/CMPC_IN0"/>
+                  <pin peripheral="ADC" signal="ANB, 4" pin_num="21" pin_signal="GPIOB4/ANB4/CMPC_IN1"/>
+                  <pin peripheral="ADC" signal="ANB, 5" pin_num="20" pin_signal="GPIOB5/ANB5/CMPC_IN2"/>
+                  <pin peripheral="CMPA" signal="IN, 3" pin_num="13" pin_signal="GPIOA0/ANA0/CMPA_IN3/CMPC_O"/>
+                  <pin peripheral="CMPB" signal="IN, 0" pin_num="25" pin_signal="GPIOB1/ANB1/CMPB_IN0/DACB_O"/>
+                  <pin peripheral="CMPC" signal="IN, 2" pin_num="20" pin_signal="GPIOB5/ANB5/CMPC_IN2"/>
+                  <pin peripheral="GPIOC" signal="GPIO, 4" pin_num="8" pin_signal="GPIOC4/TA1/CMPB_O/XB_IN8/EWM_OUT_B">
+                     <pin_features>
+                        <pin_feature name="identifier" value="phase_capture"/>
+                        <pin_feature name="direction" value="INPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOC" signal="GPIO, 5" pin_num="18" pin_signal="GPIOC5/DACA_O/XB_IN7">
+                     <pin_features>
+                        <pin_feature name="identifier" value="phase_transfer"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOF" signal="GPIO, 3" pin_num="40" pin_signal="GPIOF3/SDA1/XB_OUT7">
+                     <pin_features>
+                        <pin_feature name="identifier" value="SW_GRID"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOF" signal="GPIO, 6" pin_num="58" pin_signal="GPIOF6/TB2/PWMA_3X/PWMB_3X/XB_IN2">
+                     <pin_features>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOF" signal="GPIO, 7" pin_num="59" pin_signal="GPIOF7/TB3/CMPC_O/XB_IN3">
+                     <pin_features>
+                        <pin_feature name="identifier" value="SW_N"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOC" signal="GPIO, 15" pin_num="56" pin_signal="GPIOC15/SCL0/XB_OUT5/PWMA_FAULT5">
+                     <pin_features>
+                        <pin_feature name="identifier" value="CAN_STB"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                        <pin_feature name="gpio_init_state" value="true"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOC" signal="GPIO, 0" pin_num="3" pin_signal="GPIOC0/EXTAL/CLKIN0">
+                     <pin_features>
+                        <pin_feature name="identifier" value="user_LED1"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOC" signal="GPIO, 1" pin_num="4" pin_signal="GPIOC1/XTAL">
+                     <pin_features>
+                        <pin_feature name="identifier" value="LED_HVP"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOF" signal="GPIO, 2" pin_num="39" pin_signal="GPIOF2/SCL1/XB_OUT6">
+                     <pin_features>
+                        <pin_feature name="identifier" value="user_LED2"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOC" signal="GPIO, 13" pin_num="49" pin_signal="GPIOC13/TA3/XB_IN6/EWM_OUT_B">
+                     <pin_features>
+                        <pin_feature name="identifier" value="TP38"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIOF" signal="GPIO, 0" pin_num="36" pin_signal="GPIOF0/XB_IN6/TB2">
+                     <pin_features>
+                        <pin_feature name="identifier" value="TP40"/>
+                        <pin_feature name="direction" value="OUTPUT"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="QSCI0" signal="RXD" pin_num="7" pin_signal="GPIOC3/TA0/CMPA_O/RXD0/CLKIN1"/>
+                  <pin peripheral="QSCI0" signal="TXD" pin_num="5" pin_signal="GPIOC2/TXD0/TB0/XB_IN2/CLKO0"/>
+               </pins>
+            </function>
+         </functions_list>
+      </pins>
+      <clocks name="Clocks" version="11.0" enabled="true" update_project_code="true">
+         <generated_project_files>
+            <file path="board/clock_config.c" update_enabled="true"/>
+            <file path="board/clock_config.h" update_enabled="true"/>
+         </generated_project_files>
+         <clocks_profile>
+            <processor_version>13.0.2</processor_version>
+         </clocks_profile>
+         <clock_configurations>
+            <clock_configuration name="BOARD_BootClockRUN" id_prefix="" prefix_user_defined="false">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockRUN">
+                     <feature name="enabled" evaluation="equal" configuration="core0">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <clock_sources>
+                  <clock_source id="OCCS.ROSC200kHz.outFreq" value="200 kHz" locked="false" enabled="false"/>
+               </clock_sources>
+               <clock_outputs>
+                  <clock_output id="BUS_2X_CLK.outFreq" value="200 MHz" locked="false" accuracy=""/>
+                  <clock_output id="BUS_CLK.outFreq" value="100 MHz" locked="false" accuracy=""/>
+                  <clock_output id="CPU_CLK.outFreq" value="100 MHz" locked="false" accuracy=""/>
+                  <clock_output id="IIC0_FLT_CLK.outFreq" value="100 MHz" locked="false" accuracy=""/>
+                  <clock_output id="IIC1_FLT_CLK.outFreq" value="100 MHz" locked="false" accuracy=""/>
+                  <clock_output id="MSTR_OSC.outFreq" value="8 MHz" locked="false" accuracy=""/>
+                  <clock_output id="ROSC200kHz_CLK.outFreq" value="200 kHz" locked="false" accuracy=""/>
+                  <clock_output id="ROSC48MHz_CLK.outFreq" value="48 MHz" locked="false" accuracy=""/>
+                  <clock_output id="ROSC8MHz_CLK.outFreq" value="8 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SCI0_CLK.outFreq" value="100 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SCI1_CLK.outFreq" value="100 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SYS_2X_CLK.outFreq" value="200 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SYS_CLK.outFreq" value="100 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SYS_FTFE.outFreq" value="25 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SYS_IPBB.outFreq" value="100 MHz" locked="false" accuracy=""/>
+               </clock_outputs>
+               <clock_settings>
+                  <setting id="OCCS.DIV.scale" value="1" locked="true"/>
+                  <setting id="OCCS.EXT_SEL.sel" value="OCCS.OSC" locked="false"/>
+                  <setting id="OCCS.PLLDB.scale" value="50" locked="true"/>
+                  <setting id="OCCS.ZSRC.sel" value="OCCS.PLL_DIV2" locked="false"/>
+                  <setting id="OCCS_CTRL_PLLPD_CFG" value="Enabled" locked="false"/>
+                  <setting id="OCCS_OSCTL2_ROPD200K_CFG" value="Enabled" locked="false"/>
+               </clock_settings>
+               <called_from_default_init>true</called_from_default_init>
+            </clock_configuration>
+         </clock_configurations>
+      </clocks>
+      <dcdx name="DCDx" version="3.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
+         <dcdx_profile>
+            <processor_version>N/A</processor_version>
+         </dcdx_profile>
+         <dcdx_configurations/>
+      </dcdx>
+      <periphs name="Peripherals" version="12.0" enabled="true" update_project_code="true">
+         <dependencies>
+            <dependency resourceType="SWComponent" resourceId="middleware.fmstr" description="工具链/IDE工程中未找到FreeMASTER communication driver。工程不会被编译！" problem_level="2" source="Peripherals">
+               <feature name="enabled" evaluation="equal">
+                  <data type="Boolean">true</data>
+               </feature>
+            </dependency>
+            <dependency resourceType="SWComponent" resourceId="middleware.fmstr" description="工具链/IDE工程不支持FreeMASTER communication driver版本。所需值: ${required_value}, 实际值: ${actual_value}. 工程可能没有被正确编译。" problem_level="1" source="Peripherals">
+               <feature name="version" evaluation="equivalent">
+                  <data type="Version">3.0.1</data>
+               </feature>
+            </dependency>
+         </dependencies>
+         <generated_project_files>
+            <file path="board/peripherals.c" update_enabled="true"/>
+            <file path="board/peripherals.h" update_enabled="true"/>
+            <file path="source/freemaster_cfg.h" update_enabled="true"/>
+            <file path="startup/Flash_config.h" update_enabled="true"/>
+         </generated_project_files>
+         <peripherals_profile>
+            <processor_version>13.0.2</processor_version>
+         </peripherals_profile>
+         <functional_groups>
+            <functional_group name="BOARD_InitPeripherals" uuid="f9f6f4e8-de8e-445b-8e0d-71ccdf9e53ad" called_from_default_init="true" id_prefix="" core="core0">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="ClockOutput" resourceId="BUS_CLK" description="BUS_CLK is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.vdda" description="Signal VDDA is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.vssa" description="Signal VSSA is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.vdda" description="Signal VDDA is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.vssa" description="Signal VSSA is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.adca.0" description="Signal 0 of converter A is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.adca.3" description="Signal 3 of converter A is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.adca.2" description="Signal 2 of converter A is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.adca.4" description="Signal 4 of converter A is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.adca.1" description="Signal 1 of converter A is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.adcb.2" description="Signal 2 of converter B is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.adcb.4" description="Signal 4 of converter B is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.adcb.5" description="Signal 5 of converter B is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.adcb.3" description="Signal 3 of converter B is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="ADC.adcb.0" description="Signal 0 of converter B is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="CMPC.cmp_in.7" description="Signal Input 7 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="CMPC.cmp_in.2" description="Signal Input 2 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="BUS_CLK" description="BUS_CLK is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="QSCI1.uart_rx" description="Signal RXD is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="QSCI1.uart_tx" description="Signal TXD is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.qsci" description="The fsl_qsci driver is missing in the project  (required for FreeMASTER)." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="enabled" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="SCI1_CLK" description="SCI1 clock is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWMA.pwm_a.0" description="PWMA.PWM_A, 0 pin needs to be routed" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWMA.pwm_a.0" description="PWMA.PWM_A, 0 pin direction is set to input (Pins tool) but channel is used as PWM output (Peripherals tool)." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="direction" evaluation="notEqualIgnoreCase">
+                        <data type="String">INPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWMA.pwm_b.0" description="PWMA.PWM_B, 0 pin needs to be routed" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWMA.pwm_b.0" description="PWMA.PWM_B, 0 pin direction is set to input (Pins tool) but channel is used as PWM output (Peripherals tool)." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="direction" evaluation="notEqualIgnoreCase">
+                        <data type="String">INPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWMA.pwm_fault.0" description="PWMA.FAULT, 0 pin needs to be routed" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWMA.pwm_fault.1" description="PWMA.FAULT, 1 pin needs to be routed" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="PWMA.pwm_fault.2" description="PWMA.FAULT, 2 pin needs to be routed" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="CMPB.cmp_in.0" description="Signal Input 0 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="CMPB.cmp_in.7" description="Signal Input 7 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="BUS_CLK" description="BUS_CLK is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="CMPA.cmp_in.7" description="Signal Input 7 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="CMPA.cmp_in.3" description="Signal Input 3 is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="BUS_CLK" description="BUS_CLK is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="SCI1_CLK" description="SCI1 clock is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="QSCI1.uart_tx" description="Signal TX is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="QSCI1.uart_rx" description="Signal RX is not routed." problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="BUS_CLK" description="BUS_CLK is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="ClockOutput" resourceId="BUS_CLK" description="BUS_CLK is inactive." problem_level="2" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="frequency" evaluation="greaterThan">
+                        <data type="Frequency" unit="Hz">0</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PeripheralUnifiedSignal" resourceId="TMRA.tmr_sec_in.0" description="Timer input 0 of peripheral TMRA is not routed" problem_level="1" source="Peripherals:BOARD_InitPeripherals">
+                     <feature name="routed" evaluation="equal">
+                        <data type="Boolean">true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <instances>
+                  <instance name="ADC" uuid="839c50d3-d795-4f0d-b837-6aabdebbbee1" type="cadc_reg" type_id="cadc_reg_3aa3a1e7f4a7b23ac90f68072daac258" mode="CADC" peripheral="ADC" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="fsl_cadc">
+                        <struct name="cadcConfig">
+                           <setting name="clockSource" value="BusInterfaceClock"/>
+                           <setting name="clockSourceFreq" value="BOARD_BootClockRUN"/>
+                           <setting name="dualConverterScanMode" value="kCADC_DualConverterWorkAsTriggeredParallel"/>
+                           <setting name="enableSimultaneousMode" value="true"/>
+                           <setting name="DMATriggerSource" value="kCADC_DMATriggerSourceAsEndOfScan"/>
+                           <setting name="powerUpDelay" value="26"/>
+                           <setting name="autoPowerDown" value="false"/>
+                           <setting name="clockDivisorInt" value="4"/>
+                           <setting name="enableDMA0" value="false"/>
+                           <setting name="enableStop0" value="false"/>
+                           <setting name="startConversion0" value="false"/>
+                           <setting name="enableSYNC0" value="true"/>
+                           <setting name="manualPowerDownA" value="false"/>
+                           <setting name="highReferenceA" value="vdda"/>
+                           <setting name="lowReferenceA" value="vssa"/>
+                           <setting name="onChipAnalogInputA" value="normal"/>
+                           <setting name="tempSensorA" value="normal"/>
+                           <setting name="manualPowerDownB" value="false"/>
+                           <setting name="highReferenceB" value="vdda"/>
+                           <setting name="lowReferenceB" value="vssa"/>
+                           <setting name="onChipAnalogInputB" value="normal"/>
+                           <setting name="tempSensorB" value="normal"/>
+                        </struct>
+                        <array name="channelConfig">
+                           <struct name="0">
+                              <setting name="chMode" value="0"/>
+                           </struct>
+                           <struct name="1">
+                              <setting name="chMode" value="0"/>
+                           </struct>
+                           <struct name="2">
+                              <setting name="chMode" value="0"/>
+                           </struct>
+                           <struct name="3">
+                              <setting name="chMode" value="0"/>
+                           </struct>
+                           <struct name="4">
+                              <setting name="chMode" value="0"/>
+                           </struct>
+                           <struct name="5">
+                              <setting name="chMode" value="0"/>
+                           </struct>
+                           <struct name="6">
+                              <setting name="chMode" value="0"/>
+                           </struct>
+                           <struct name="7">
+                              <setting name="chMode" value="0"/>
+                           </struct>
+                        </array>
+                        <struct name="inputGainConfig">
+                           <array name="channels_inputGain_convA">
+                              <struct name="0">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="1">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="2">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="3">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="4">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="5">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="6">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="7">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="8">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="9">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                           </array>
+                           <array name="channels_inputGain_convB">
+                              <struct name="0">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="1">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="2">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="3">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="4">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="5">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="6">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="7">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="8">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                              <struct name="9">
+                                 <setting name="channelGain" value="0"/>
+                              </struct>
+                           </array>
+                        </struct>
+                        <array name="channels_config">
+                           <struct name="0">
+                              <setting name="sampleName" value="Sample_0"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.0"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="1">
+                              <setting name="sampleName" value="Sample_1"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.1"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="2">
+                              <setting name="sampleName" value="Sample_2"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.2"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="3">
+                              <setting name="sampleName" value="Sample_3"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.3"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="4">
+                              <setting name="sampleName" value="Sample_4"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.4"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="5">
+                              <setting name="sampleName" value="Sample_5"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.5"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="6">
+                              <setting name="sampleName" value="Sample_6"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.6"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="7">
+                              <setting name="sampleName" value="Sample_7"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.7"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="8">
+                              <setting name="sampleName" value="Sample_8"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.0"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="9">
+                              <setting name="sampleName" value="Sample_9"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.1"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="10">
+                              <setting name="sampleName" value="Sample_10"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.2"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="11">
+                              <setting name="sampleName" value="Sample_11"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.3"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="12">
+                              <setting name="sampleName" value="Sample_12"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.4"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="13">
+                              <setting name="sampleName" value="Sample_13"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.5"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="14">
+                              <setting name="sampleName" value="Sample_14"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.6"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="15">
+                              <setting name="sampleName" value="Sample_15"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.7"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="16">
+                              <setting name="sampleName" value="Sample_16"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.8"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="17">
+                              <setting name="sampleName" value="Sample_17"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.9"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="18">
+                              <setting name="sampleName" value="Sample_18"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.8"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="19">
+                              <setting name="sampleName" value="Sample_19"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.9"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                        </array>
+                        <array name="channels_config_A_parallel">
+                           <struct name="0">
+                              <setting name="sampleName" value="Sample_0"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.0"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="2048"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="1">
+                              <setting name="sampleName" value="Sample_1"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.3"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="2048"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="2">
+                              <setting name="sampleName" value="Sample_2"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.2"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="2048"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="3">
+                              <setting name="sampleName" value="Sample_3"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.4"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="2048"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="4">
+                              <setting name="sampleName" value="Sample_4"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANA.1"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="2048"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="5">
+                              <setting name="sampleName" value="Sample_5"/>
+                              <setting name="disableSample" value="true"/>
+                              <setting name="channelNumberEnum" value="ANA.5"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="6">
+                              <setting name="sampleName" value="Sample_6"/>
+                              <setting name="disableSample" value="true"/>
+                              <setting name="channelNumberEnum" value="ANA.6"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="7">
+                              <setting name="sampleName" value="Sample_7"/>
+                              <setting name="disableSample" value="true"/>
+                              <setting name="channelNumberEnum" value="ANA.7"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="8">
+                              <setting name="sampleName" value="Sample_16"/>
+                              <setting name="disableSample" value="true"/>
+                              <setting name="channelNumberEnum" value="ANA.8"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="9">
+                              <setting name="sampleName" value="Sample_17"/>
+                              <setting name="disableSample" value="true"/>
+                              <setting name="channelNumberEnum" value="ANA.9"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                        </array>
+                        <array name="channels_config_B_parallel">
+                           <struct name="0">
+                              <setting name="sampleName" value="Sample_8"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.2"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="2048"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="1">
+                              <setting name="sampleName" value="Sample_9"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.4"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="2048"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="2">
+                              <setting name="sampleName" value="Sample_10"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.5"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="3">
+                              <setting name="sampleName" value="Sample_11"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.3"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="2048"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="4">
+                              <setting name="sampleName" value="Sample_12"/>
+                              <setting name="disableSample" value="false"/>
+                              <setting name="channelNumberEnum" value="ANB.0"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="5">
+                              <setting name="sampleName" value="Sample_13"/>
+                              <setting name="disableSample" value="true"/>
+                              <setting name="channelNumberEnum" value="ANB.5"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="6">
+                              <setting name="sampleName" value="Sample_14"/>
+                              <setting name="disableSample" value="true"/>
+                              <setting name="channelNumberEnum" value="ANB.6"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="7">
+                              <setting name="sampleName" value="Sample_15"/>
+                              <setting name="disableSample" value="true"/>
+                              <setting name="channelNumberEnum" value="ANB.7"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="8">
+                              <setting name="sampleName" value="Sample_18"/>
+                              <setting name="disableSample" value="true"/>
+                              <setting name="channelNumberEnum" value="ANB.8"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                           <struct name="9">
+                              <setting name="sampleName" value="Sample_19"/>
+                              <setting name="disableSample" value="true"/>
+                              <setting name="channelNumberEnum" value="ANB.9"/>
+                              <setting name="zeroCrossingMode" value="0"/>
+                              <setting name="highLimitValue" value="4095"/>
+                              <setting name="lowLimitValue" value="0"/>
+                              <setting name="offsetValue" value="0"/>
+                              <setting name="enableWaitSync" value="false"/>
+                              <setting name="enableSampleInterrupt" value="false"/>
+                              <struct name="cadcTemplateSampleVariables"/>
+                           </struct>
+                        </array>
+                        <struct name="interrupt">
+                           <set name="interruptSources">
+                              <selected/>
+                           </set>
+                           <setting name="enable_err_irq" value="false"/>
+                           <struct name="interrupt_err">
+                              <setting name="IRQn" value="kADC12_ERR_VECTORn"/>
+                              <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                              <setting name="enable_custom_name" value="false"/>
+                           </struct>
+                           <setting name="enable_cc0_irq" value="false"/>
+                           <struct name="interrupt_cc0">
+                              <setting name="IRQn" value="kADC12_CC0_VECTORn"/>
+                              <setting name="dsc_enable_interrrupt" value="iprVal1"/>
+                              <setting name="enable_custom_name" value="false"/>
+                           </struct>
+                           <setting name="enable_cc1_irq" value="false"/>
+                           <struct name="interrupt_cc1">
+                              <setting name="IRQn" value="kADC12_CC1_VECTORn"/>
+                              <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                              <setting name="enable_custom_name" value="false"/>
+                           </struct>
+                        </struct>
+                     </config_set>
+                  </instance>
+                  <instance name="CMPC" uuid="f21e57c6-94ca-459e-9c60-e94e0c84ec3f" type="cmp_reg" type_id="cmp_reg_3fe3364eca8ece52bd212873a03681c2" mode="general" peripheral="CMPC" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="fsl_filter">
+                        <struct name="filter_config">
+                           <setting name="clockSource" value="SystemClock"/>
+                           <setting name="clockSourceFreq" value="BOARD_BootClockRUN"/>
+                           <setting name="filterPeriod" value="1"/>
+                           <setting name="filterCount2" value="3"/>
+                        </struct>
+                     </config_set>
+                     <config_set name="fsl_cmp">
+                        <struct name="main_config">
+                           <setting name="explicitEnableCmp" value="true"/>
+                           <setting name="filterModes" value="m0"/>
+                           <setting name="hysteresisMode" value="kCMP_HysteresisLevel0"/>
+                           <setting name="enableHighSpeed" value="false"/>
+                           <setting name="enableInvertOutput" value="false"/>
+                           <setting name="useUnfilteredOutput" value="false"/>
+                           <setting name="enablePinOut" value="false"/>
+                        </struct>
+                        <setting name="positiveChannel" value="IN.7"/>
+                        <setting name="negativeChannel" value="IN.2"/>
+                     </config_set>
+                     <config_set name="fsl_dac">
+                        <setting name="enableDAC" value="true"/>
+                        <struct name="dac_config">
+                           <setting name="referenceVoltageSource" value="DAC_8bit_VIN1"/>
+                           <setting name="DACValue" value="233"/>
+                        </struct>
+                     </config_set>
+                     <config_set name="interrupt">
+                        <set name="interrupt_sel">
+                           <selected/>
+                        </set>
+                        <setting name="enableDma" value="false"/>
+                        <setting name="enable_irq" value="false"/>
+                        <struct name="interrupt">
+                           <setting name="IRQn" value="kCMPA_VECTORn"/>
+                           <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                           <setting name="enable_custom_name" value="false"/>
+                        </struct>
+                     </config_set>
+                  </instance>
+                  <instance name="Flash_configuration" uuid="89bbc2ec-ec69-42f6-8359-549921cee6ef" type="dsc_flash_config" type_id="dsc_flash_config_87b8cda2db02ccd1732cf954ffb02af3" mode="general" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="fcf_config">
+                        <struct name="bcaConfig">
+                           <struct name="crcCheck">
+                              <setting name="crcStartAddress" value="0xFFFFFFFF"/>
+                              <setting name="crcByteCount" value="0xFFFFFFFF"/>
+                              <setting name="crcExpectedValue" value="0xFFFFFFFF"/>
+                           </struct>
+                           <set name="enabledPeripherals">
+                              <selected>
+                                 <id>uart</id>
+                                 <id>i2c</id>
+                                 <id>spi</id>
+                                 <id>can</id>
+                              </selected>
+                           </set>
+                           <setting name="i2cSlaveAddress" value="0xFF"/>
+                           <setting name="peripheralDetectionTimeout" value="0xFFFF"/>
+                           <setting name="directBootFlag" value="false"/>
+                           <struct name="canConfig">
+                              <setting name="baudRateConfig" value="auto"/>
+                              <setting name="canTxId" value="0xFFFF"/>
+                              <setting name="canRxId" value="0xFFFF"/>
+                           </struct>
+                        </struct>
+                        <struct name="flashConfig">
+                           <array name="keyBytes">
+                              <struct name="0">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                              <struct name="1">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                              <struct name="2">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                              <struct name="3">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                              <struct name="4">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                              <struct name="5">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                              <struct name="6">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                              <struct name="7">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                           </array>
+                           <array name="protBytes">
+                              <struct name="0">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                              <struct name="1">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                              <struct name="2">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                              <struct name="3">
+                                 <setting name="byteValue" value="0xFF"/>
+                              </struct>
+                           </array>
+                           <struct name="FSEC">
+                              <setting name="SEC" value="unsecure"/>
+                              <setting name="FSLACC" value="granted"/>
+                              <setting name="KEYEN" value="false"/>
+                              <setting name="MEEN" value="true"/>
+                           </struct>
+                           <setting name="bootOption" value="0"/>
+                           <setting name="pwrMode" value="1"/>
+                        </struct>
+                        <struct name="fcf_codegenerator"/>
+                     </config_set>
+                  </instance>
+                  <instance name="FreeMASTER" uuid="e242415d-573f-4e8a-a14e-a9ffb45d08f9" type="freemaster" type_id="freemaster_14894d49d87e02d0dca5f799e22554da" mode="general" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="freemaster_config">
+                        <setting name="FMSTR_DISABLE" value="false"/>
+                        <setting name="initFreemaster" value="true"/>
+                        <struct name="generalConfig">
+                           <setting name="commInterface" value="serial"/>
+                           <setting name="interruptMode" value="polling"/>
+                           <setting name="initType" value="true"/>
+                           <struct name="serialConfig">
+                              <setting name="peripheralUART" value="QSCI1"/>
+                              <setting name="clockSource" value="genericUartClockSource"/>
+                              <setting name="clockSourceFreq" value="BOARD_BootClockRUN"/>
+                              <setting name="u32BaudRateBps" value="1"/>
+                              <setting name="parityMode_qsci" value="kQSCI_ParityDisabled"/>
+                              <setting name="dataBitCount_qsci" value="kQSCI_Data8Bit"/>
+                              <setting name="polarityMode_qsci" value="kQSCI_PolarityNormal"/>
+                              <setting name="enableUserInit" value="false"/>
+                              <struct name="user_init">
+                                 <setting name="initFunctionID" value=""/>
+                              </struct>
+                              <setting name="enable_rx_irq" value="false"/>
+                              <struct name="interrupt_rx">
+                                 <setting name="IRQn" value="kQSCI1_RCV_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                              <setting name="enable_tx_irq" value="false"/>
+                              <struct name="interrupt_tx">
+                                 <setting name="IRQn" value="kQSCI1_TDRE_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                              <setting name="enable_err_irq" value="false"/>
+                              <struct name="interrupt_error">
+                                 <setting name="IRQn" value="kQSCI1_RERR_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                              <setting name="enable_tridle_irq" value="false"/>
+                              <struct name="interrupt_tridle">
+                                 <setting name="IRQn" value="kQSCI1_TRIDLE_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                           </struct>
+                           <struct name="canConfig" quick_selection="QuickSelection1">
+                              <setting name="peripheralCAN" value="CAN0"/>
+                              <setting name="generic_can_driver_version" value="2.1.1"/>
+                              <setting name="clockSource" value="kFLEXCAN_ClkSrc0"/>
+                              <setting name="clockSourceFreq" value="BOARD_BootClockRUN"/>
+                              <struct name="dscFlexcanConfig">
+                                 <setting name="baudRate" value="1"/>
+                              </struct>
+                              <setting name="enableUserInit" value="false"/>
+                              <struct name="user_init">
+                                 <setting name="initFunctionID" value=""/>
+                              </struct>
+                              <setting name="enable_flexcan_mb_irq" value="false"/>
+                              <struct name="flexcan_interrupt_mb">
+                                 <setting name="IRQn" value="kCAN_MB_OR_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                              <setting name="enable_flexcan_busoff_irq" value="false"/>
+                              <struct name="flexcan_interrupt_busoff">
+                                 <setting name="IRQn" value="kCAN_BUS_OFF_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                              <setting name="enable_flexcan_error_irq" value="false"/>
+                              <struct name="flexcan_interrupt_error">
+                                 <setting name="IRQn" value="kCAN_ERROR_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                              <setting name="enable_flexcan_txwarn_irq" value="false"/>
+                              <struct name="flexcan_interrupt_txwarn">
+                                 <setting name="IRQn" value="kCAN_TX_WARN_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                              <setting name="enable_flexcan_rxwarn_irq" value="false"/>
+                              <struct name="flexcan_interrupt_rxwarn">
+                                 <setting name="IRQn" value="kCAN_RX_WARN_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                              <setting name="enable_flexcan_wakeup_irq" value="false"/>
+                              <struct name="flexcan_interrupt_wakeup">
+                                 <setting name="IRQn" value="kCAN_WAKEUP_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                           </struct>
+                           <struct name="dsc_eonce_config">
+                              <setting name="txRegInterruptEnable" value="false"/>
+                              <struct name="tx_interrupt_vector">
+                                 <setting name="IRQn" value="kTX_REG_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                              <setting name="rxRegInterruptEnable" value="false"/>
+                              <struct name="rx_interrupt_vector">
+                                 <setting name="IRQn" value="kRX_REG_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value=""/>
+                                 <setting name="useDefaultISR" value="false"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                                 <setting name="handler_custom_name" value=""/>
+                              </struct>
+                           </struct>
+                           <setting name="FMSTR_FLEXCAN_TXMB" value="0"/>
+                           <setting name="FMSTR_FLEXCAN_RXMB" value="0"/>
+                           <struct name="mcanRamConfig">
+                              <setting name="RAMbufferType" value="default"/>
+                              <setting name="bufferAddressValue" value="0"/>
+                              <setting name="bufferAddress" value=""/>
+                              <setting name="bufferExternDef" value=""/>
+                              <setting name="mcan_tx" value="0"/>
+                              <setting name="mcan_rx" value="0"/>
+                           </struct>
+                           <setting name="FMSTR_COMM_BUFFER_SIZE" value="autoSize"/>
+                           <setting name="FMSTR_COMM_RQUEUE_SIZE" value="32"/>
+                           <setting name="FMSTR_USE_SCOPE" value="1"/>
+                           <setting name="FMSTR_MAX_SCOPE_VARS" value="8"/>
+                           <setting name="FMSTR_REC_FLOAT_TRIG" value="false"/>
+                           <array name="recorders">
+                              <struct name="0">
+                                 <struct name="recID">
+                                    <setting name="enableCustomID" value="false"/>
+                                 </struct>
+                                 <setting name="nameRec" value="Description of recorder 0"/>
+                                 <struct name="recBuff">
+                                    <setting name="customBuffer" value="false"/>
+                                    <setting name="bufferAddress" value=""/>
+                                    <setting name="bufferExternDef" value=""/>
+                                    <setting name="bufferSize" value="4096"/>
+                                 </struct>
+                                 <setting name="basePeriod_ns" value="50000"/>
+                                 <setting name="recInit" value="true"/>
+                              </struct>
+                           </array>
+                           <setting name="FMSTR_USE_TSA" value="false"/>
+                           <setting name="FMSTR_USE_TSA_INROM" value="true"/>
+                           <setting name="FMSTR_USE_TSA_SAFETY" value="true"/>
+                           <setting name="FMSTR_USE_TSA_DYNAMIC" value="false"/>
+                           <setting name="tsaBufferInit" value="false"/>
+                           <struct name="tsaBuff">
+                              <setting name="customBuffer" value="false"/>
+                              <setting name="bufferAddress" value=""/>
+                              <setting name="bufferExternDef" value=""/>
+                              <setting name="bufferSize" value=""/>
+                           </struct>
+                           <array name="pipes"/>
+                           <setting name="FMSTR_USE_READMEM" value="true"/>
+                           <setting name="FMSTR_USE_WRITEMEM" value="true"/>
+                           <setting name="FMSTR_USE_WRITEMEMMASK" value="true"/>
+                           <setting name="passR" value=""/>
+                           <setting name="passRW" value=""/>
+                           <setting name="passRWF" value=""/>
+                           <setting name="FMSTR_USE_HASHED_PASSWORDS" value="false"/>
+                           <setting name="FMSTR_USE_APPCMD" value="false"/>
+                           <setting name="FMSTR_APPCMD_BUFF_SIZE" value="32"/>
+                           <setting name="FMSTR_MAX_APPCMD_CALLS" value="8"/>
+                           <setting name="FMSTR_DEBUG_LEVEL" value="0"/>
+                           <setting name="FMSTR_DEBUG_PRINTF" value="debug_console"/>
+                           <setting name="FMSTR_DEBUG_TX" value="false"/>
+                           <setting name="FMSTR_CUSTOM_INCLUDES" value=""/>
+                           <setting name="FMSTR_CUSTOM_OPTIONS" value=""/>
+                        </struct>
+                        <struct name="freemaster_codegenerator"/>
+                     </config_set>
+                  </instance>
+                  <instance name="INTC" uuid="1ade4a33-b8fc-4b1a-aef5-245ca5c39c63" type="intc_reg" type_id="intc_reg_5d361a53fef6bec91d1f7c2aeedd895b" mode="general" peripheral="INTC" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="intc">
+                        <setting name="dsc_core_int_level" value="mask_level_0_1_2"/>
+                        <array name="interrupt_table">
+                           <struct name="0"/>
+                           <struct name="1"/>
+                           <struct name="2"/>
+                        </array>
+                        <array name="interrupts"/>
+                     </config_set>
+                  </instance>
+                  <instance name="PWMA" uuid="3de070d4-4350-480a-b70f-ebbdb347a467" type="pwm_reg" type_id="pwm_reg_d49946f7b366f6b63d56e6e76fd333cc" mode="general" peripheral="PWMA" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="fsl_pwm">
+                        <setting name="clockSource" value="SystemClock"/>
+                        <setting name="clockSourceFreq" value="BOARD_BootClockRUN"/>
+                        <setting name="pllMonitor" value="0"/>
+                        <array name="submodules">
+                           <struct name="0">
+                              <setting name="sm" value="kPWM_Module_0"/>
+                              <struct name="sm_template_params"/>
+                              <struct name="config">
+                                 <setting name="clockSource" value="kPWM_BusClock"/>
+                                 <setting name="prescale" value="0"/>
+                                 <setting name="compareMode" value="0"/>
+                                 <setting name="loadOK" value="true"/>
+                                 <setting name="startCounter" value="false"/>
+                                 <setting name="signed_unsigned" value="signed"/>
+                                 <setting name="init" value="-2500"/>
+                                 <setting name="val1" value="2499"/>
+                                 <setting name="fracval1" value="0"/>
+                                 <setting name="val0" value="0"/>
+                                 <setting name="val2" value="0"/>
+                                 <setting name="fracval2" value="0"/>
+                                 <setting name="val3" value="0"/>
+                                 <setting name="fracval3" value="0"/>
+                                 <setting name="val4" value="2491"/>
+                                 <setting name="fracval4" value="0"/>
+                                 <setting name="val5" value="2491"/>
+                                 <setting name="fracval5" value="0"/>
+                                 <setting name="initializationControl" value="0"/>
+                                 <setting name="enableDebugMode" value="false"/>
+                                 <setting name="enableWait" value="false"/>
+                                 <setting name="pairOperation" value="0"/>
+                                 <setting name="pairMain" value="0"/>
+                                 <struct name="deadtime_logic_inputs">
+                                    <struct name="pwm23">
+                                       <setting name="deadtime_input_by_force" value="0"/>
+                                       <setting name="SW_value" value="0"/>
+                                    </struct>
+                                    <struct name="pwm45">
+                                       <setting name="deadtime_input_by_force" value="0"/>
+                                       <setting name="SW_value" value="0"/>
+                                    </struct>
+                                 </struct>
+                                 <struct name="deadtime_params">
+                                    <struct name="deadTime0">
+                                       <setting name="clockSource" value="kPWM_BusClock"/>
+                                       <setting name="deadtimeValue" value="0"/>
+                                    </struct>
+                                    <struct name="deadTime1">
+                                       <setting name="clockSource" value="kPWM_BusClock"/>
+                                       <setting name="deadtimeValue" value="0"/>
+                                    </struct>
+                                 </struct>
+                                 <struct name="reloadControl">
+                                    <setting name="reloadImmediate" value="false"/>
+                                    <setting name="reloadLogic" value="kPWM_ReloadPwmFullCycle"/>
+                                    <setting name="reloadSelect" value="0"/>
+                                    <setting name="reloadFrequency" value="0"/>
+                                 </struct>
+                                 <struct name="forceControl">
+                                    <setting name="forceTrigger" value="0"/>
+                                    <setting name="pwm23Init" value="0"/>
+                                    <setting name="pwm45Init" value="0"/>
+                                    <setting name="pwmxInit" value="0"/>
+                                    <setting name="forceEn" value="false"/>
+                                 </struct>
+                                 <struct name="fracControl">
+                                    <set name="fracEn">
+                                       <selected/>
+                                    </set>
+                                    <setting name="powerUp" value="false"/>
+                                 </struct>
+                                 <struct name="doubleSwitching">
+                                    <setting name="doubleEn" value="false"/>
+                                    <setting name="doubleX" value="false"/>
+                                    <setting name="split" value="0"/>
+                                 </struct>
+                                 <set name="outputEn">
+                                    <selected/>
+                                 </set>
+                                 <set name="outputMask">
+                                    <selected/>
+                                 </set>
+                                 <setting name="maskImmediately" value="true"/>
+                                 <set name="outputTrigger_sel">
+                                    <selected>
+                                       <id>kPWM_ValueRegister_4</id>
+                                    </selected>
+                                 </set>
+                                 <setting name="triggerFrequency" value="0"/>
+                                 <setting name="triggerSource0" value="0"/>
+                                 <setting name="triggerSource1" value="1"/>
+                                 <set name="interrupt_sel">
+                                    <selected>
+                                       <id>kPWM_CompareVal5InterruptEnable</id>
+                                    </selected>
+                                 </set>
+                                 <set name="interrupt_flags">
+                                    <selected>
+                                       <id>kPWM_CompareVal5InterruptFlag</id>
+                                    </selected>
+                                 </set>
+                                 <setting name="dma_used" value="false"/>
+                                 <struct name="dma">
+                                    <setting name="pwmDMA_activate" value="false"/>
+                                    <set name="captureDMA_enable">
+                                       <selected/>
+                                    </set>
+                                    <setting name="captureDMA_source" value="0"/>
+                                    <setting name="captureDMA_watermark_control" value="0"/>
+                                 </struct>
+                              </struct>
+                              <array name="channels">
+                                 <struct name="0">
+                                    <setting name="functionSel" value="pwmOutput"/>
+                                    <struct name="pwm">
+                                       <setting name="level" value="0"/>
+                                       <struct name="fault_channel0">
+                                          <set name="dismap">
+                                             <selected>
+                                                <id>s0</id>
+                                                <id>s1</id>
+                                                <id>s2</id>
+                                             </selected>
+                                          </set>
+                                       </struct>
+                                       <struct name="fault_channel1">
+                                          <set name="dismap">
+                                             <selected/>
+                                          </set>
+                                       </struct>
+                                       <setting name="faultState" value="0"/>
+                                    </struct>
+                                 </struct>
+                                 <struct name="1">
+                                    <setting name="functionSel" value="pwmOutput"/>
+                                    <struct name="pwm">
+                                       <setting name="level" value="0"/>
+                                       <struct name="fault_channel0">
+                                          <set name="dismap">
+                                             <selected>
+                                                <id>s0</id>
+                                                <id>s1</id>
+                                                <id>s2</id>
+                                             </selected>
+                                          </set>
+                                       </struct>
+                                       <struct name="fault_channel1">
+                                          <set name="dismap">
+                                             <selected/>
+                                          </set>
+                                       </struct>
+                                       <setting name="faultState" value="0"/>
+                                    </struct>
+                                 </struct>
+                                 <struct name="2">
+                                    <setting name="functionSel" value="notUsed"/>
+                                 </struct>
+                              </array>
+                              <setting name="compare_interruptEn" value="true"/>
+                              <struct name="compare_interrupt">
+                                 <setting name="IRQn" value="keFlexPWMA_CMP0_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value="iprVal2"/>
+                                 <setting name="enable_custom_name" value="true"/>
+                                 <setting name="handler_custom_name" value="Fast_Ctrl_ISR"/>
+                              </struct>
+                              <setting name="reload_interruptEn" value="false"/>
+                              <struct name="reload_interrupt">
+                                 <setting name="IRQn" value="keFlexPWMA_RELOAD0_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                              </struct>
+                           </struct>
+                        </array>
+                        <array name="faultChannels">
+                           <struct name="0">
+                              <struct name="commonFaultSetting">
+                                 <setting name="clockSource" value="kPWM_BusClock"/>
+                                 <setting name="faultFilterPeriod" value="1"/>
+                                 <setting name="faultFilterCount" value="3"/>
+                                 <setting name="faultGlitchStretch" value="false"/>
+                                 <setting name="testFault" value="false"/>
+                              </struct>
+                              <array name="faults">
+                                 <struct name="0">
+                                    <setting name="faultClearingMode" value="kPWM_Automatic"/>
+                                    <setting name="faultLevelR" value="0"/>
+                                    <setting name="enableCombinationalPathR" value="0"/>
+                                    <setting name="recoverMode" value="kPWM_RecoverFullCycle"/>
+                                    <setting name="fault_int_source" value="true"/>
+                                 </struct>
+                                 <struct name="1">
+                                    <setting name="faultClearingMode" value="kPWM_Automatic"/>
+                                    <setting name="faultLevelR" value="0"/>
+                                    <setting name="enableCombinationalPathR" value="0"/>
+                                    <setting name="recoverMode" value="kPWM_RecoverFullCycle"/>
+                                    <setting name="fault_int_source" value="true"/>
+                                 </struct>
+                                 <struct name="2">
+                                    <setting name="faultClearingMode" value="kPWM_ManualSafety"/>
+                                    <setting name="faultLevelR" value="0"/>
+                                    <setting name="enableCombinationalPathR" value="0"/>
+                                    <setting name="recoverMode" value="kPWM_RecoverFullCycle"/>
+                                    <setting name="fault_int_source" value="false"/>
+                                 </struct>
+                                 <struct name="3">
+                                    <setting name="faultClearingMode" value="kPWM_ManualNormal"/>
+                                    <setting name="faultLevelR" value="0"/>
+                                    <setting name="enableCombinationalPathR" value="0"/>
+                                    <setting name="recoverMode" value="kPWM_NoRecovery"/>
+                                    <setting name="fault_int_source" value="false"/>
+                                 </struct>
+                              </array>
+                              <struct name="fault_template_params"/>
+                           </struct>
+                           <struct name="1">
+                              <struct name="commonFaultSetting">
+                                 <setting name="clockSource" value="kPWM_BusClock"/>
+                                 <setting name="faultFilterPeriod" value="0"/>
+                                 <setting name="faultFilterCount" value="3"/>
+                                 <setting name="faultGlitchStretch" value="false"/>
+                                 <setting name="testFault" value="false"/>
+                              </struct>
+                              <array name="faults">
+                                 <struct name="0">
+                                    <setting name="faultClearingMode" value="kPWM_ManualNormal"/>
+                                    <setting name="faultLevelR" value="0"/>
+                                    <setting name="enableCombinationalPathR" value="0"/>
+                                    <setting name="recoverMode" value="kPWM_NoRecovery"/>
+                                    <setting name="fault_int_source" value="false"/>
+                                 </struct>
+                                 <struct name="1">
+                                    <setting name="faultClearingMode" value="kPWM_ManualNormal"/>
+                                    <setting name="faultLevelR" value="0"/>
+                                    <setting name="enableCombinationalPathR" value="0"/>
+                                    <setting name="recoverMode" value="kPWM_NoRecovery"/>
+                                    <setting name="fault_int_source" value="false"/>
+                                 </struct>
+                                 <struct name="2">
+                                    <setting name="faultClearingMode" value="kPWM_ManualNormal"/>
+                                    <setting name="faultLevelR" value="0"/>
+                                    <setting name="enableCombinationalPathR" value="0"/>
+                                    <setting name="recoverMode" value="kPWM_NoRecovery"/>
+                                    <setting name="fault_int_source" value="false"/>
+                                 </struct>
+                                 <struct name="3">
+                                    <setting name="faultClearingMode" value="kPWM_ManualNormal"/>
+                                    <setting name="faultLevelR" value="0"/>
+                                    <setting name="enableCombinationalPathR" value="0"/>
+                                    <setting name="recoverMode" value="kPWM_NoRecovery"/>
+                                    <setting name="fault_int_source" value="false"/>
+                                 </struct>
+                              </array>
+                              <struct name="fault_template_params"/>
+                           </struct>
+                        </array>
+                        <setting name="capture_interruptEn" value="false"/>
+                        <struct name="capture_interrupt">
+                           <setting name="IRQn" value="keFlexPWMA_CAP_VECTORn"/>
+                           <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                           <setting name="enable_custom_name" value="false"/>
+                        </struct>
+                        <setting name="fault_interruptEn" value="true"/>
+                        <struct name="fault_interrupt">
+                           <setting name="IRQn" value="keFlexPWMA_FAULT_VECTORn"/>
+                           <setting name="dsc_enable_interrrupt" value="iprVal1"/>
+                           <setting name="enable_custom_name" value="true"/>
+                           <setting name="handler_custom_name" value="CUR_CBCPro_Cnt_ISR"/>
+                        </struct>
+                        <setting name="error_interruptEn" value="false"/>
+                        <struct name="error_interrupt">
+                           <setting name="IRQn" value="keFlexPWMA_RERR_VECTORn"/>
+                           <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                           <setting name="enable_custom_name" value="false"/>
+                        </struct>
+                        <struct name="pwm_common_template_params"/>
+                     </config_set>
+                  </instance>
+                  <instance name="CMPB" uuid="4adf6ffd-2ef5-4f23-ab62-dc11f4eebc70" type="cmp_reg" type_id="cmp_reg_3fe3364eca8ece52bd212873a03681c2" mode="general" peripheral="CMPB" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="fsl_filter">
+                        <struct name="filter_config">
+                           <setting name="clockSource" value="SystemClock"/>
+                           <setting name="clockSourceFreq" value="BOARD_BootClockRUN"/>
+                           <setting name="filterPeriod" value="1"/>
+                           <setting name="filterCount2" value="3"/>
+                        </struct>
+                     </config_set>
+                     <config_set name="fsl_cmp">
+                        <struct name="main_config">
+                           <setting name="explicitEnableCmp" value="true"/>
+                           <setting name="filterModes" value="m0"/>
+                           <setting name="hysteresisMode" value="kCMP_HysteresisLevel0"/>
+                           <setting name="enableHighSpeed" value="false"/>
+                           <setting name="enableInvertOutput" value="false"/>
+                           <setting name="useUnfilteredOutput" value="false"/>
+                           <setting name="enablePinOut" value="false"/>
+                        </struct>
+                        <setting name="positiveChannel" value="IN.0"/>
+                        <setting name="negativeChannel" value="IN.7"/>
+                     </config_set>
+                     <config_set name="fsl_dac">
+                        <setting name="enableDAC" value="true"/>
+                        <struct name="dac_config">
+                           <setting name="referenceVoltageSource" value="DAC_8bit_VIN1"/>
+                           <setting name="DACValue" value="63"/>
+                        </struct>
+                     </config_set>
+                     <config_set name="interrupt">
+                        <set name="interrupt_sel">
+                           <selected/>
+                        </set>
+                        <setting name="enableDma" value="false"/>
+                        <setting name="enable_irq" value="false"/>
+                        <struct name="interrupt">
+                           <setting name="IRQn" value="kCMPA_VECTORn"/>
+                           <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                           <setting name="enable_custom_name" value="false"/>
+                        </struct>
+                     </config_set>
+                  </instance>
+                  <instance name="CMPA" uuid="29164ca0-6365-4a8d-a82b-8bde98f950f5" type="cmp_reg" type_id="cmp_reg_3fe3364eca8ece52bd212873a03681c2" mode="general" peripheral="CMPA" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="fsl_filter">
+                        <struct name="filter_config">
+                           <setting name="clockSource" value="SystemClock"/>
+                           <setting name="clockSourceFreq" value="BOARD_BootClockRUN"/>
+                           <setting name="filterPeriod" value="1"/>
+                           <setting name="filterCount2" value="3"/>
+                        </struct>
+                     </config_set>
+                     <config_set name="fsl_cmp">
+                        <struct name="main_config">
+                           <setting name="explicitEnableCmp" value="true"/>
+                           <setting name="filterModes" value="m0"/>
+                           <setting name="hysteresisMode" value="kCMP_HysteresisLevel0"/>
+                           <setting name="enableHighSpeed" value="false"/>
+                           <setting name="enableInvertOutput" value="false"/>
+                           <setting name="useUnfilteredOutput" value="false"/>
+                           <setting name="enablePinOut" value="false"/>
+                        </struct>
+                        <setting name="positiveChannel" value="IN.7"/>
+                        <setting name="negativeChannel" value="IN.3"/>
+                     </config_set>
+                     <config_set name="fsl_dac">
+                        <setting name="enableDAC" value="true"/>
+                        <struct name="dac_config">
+                           <setting name="referenceVoltageSource" value="DAC_8bit_VIN1"/>
+                           <setting name="DACValue" value="192"/>
+                        </struct>
+                     </config_set>
+                     <config_set name="interrupt">
+                        <set name="interrupt_sel">
+                           <selected/>
+                        </set>
+                        <setting name="enableDma" value="false"/>
+                        <setting name="enable_irq" value="false"/>
+                        <struct name="interrupt">
+                           <setting name="IRQn" value="kCMPA_VECTORn"/>
+                           <setting name="dsc_enable_interrrupt" value="iprVal1"/>
+                           <setting name="enable_custom_name" value="true"/>
+                           <setting name="handler_custom_name" value="INV_CBC_CNT_ISR"/>
+                        </struct>
+                     </config_set>
+                  </instance>
+                  <instance name="QSCI1" uuid="9f5f048e-6e12-4937-8f76-8a1b65119476" type="qsci_reg" type_id="qsci_reg_2d9323f68f6773d3646d5e49c6c75606" mode="general" peripheral="QSCI1" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="fsl_qsci">
+                        <struct name="qsciConfig">
+                           <setting name="clockSource" value="BusInterfaceClock"/>
+                           <setting name="clockSourceFreq" value="BOARD_BootClockRUN"/>
+                           <setting name="DividerBaudRateStr" value="868"/>
+                           <setting name="parityEnable" value="false"/>
+                           <setting name="parityMode" value="0"/>
+                           <setting name="dataBitCount" value="0"/>
+                           <setting name="polarityMode" value="0"/>
+                           <setting name="fifoEn" value="false"/>
+                           <setting name="txFifoWatermark" value="0"/>
+                           <setting name="rxFifoWatermark" value="1"/>
+                           <setting name="enableTx" value="true"/>
+                           <setting name="enableRx" value="true"/>
+                           <setting name="LINSlaveEnable" value="false"/>
+                           <setting name="LoopEnable" value="false"/>
+                           <setting name="ReceiverSource" value="0"/>
+                           <setting name="WaitEnable" value="false"/>
+                           <setting name="StopHoldEnable" value="false"/>
+                           <setting name="StandbyEnable" value="false"/>
+                           <setting name="WakeUpCondition" value="0"/>
+                           <setting name="txDMAEn" value="false"/>
+                           <setting name="rxDMAEn" value="false"/>
+                           <struct name="interrupt_vectors">
+                              <set name="interrupt_types">
+                                 <selected/>
+                              </set>
+                              <setting name="enable_tx_irq" value="false"/>
+                              <struct name="interrupt_tx">
+                                 <setting name="IRQn" value="kQSCI0_TDRE_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                              </struct>
+                              <setting name="enable_rx_irq" value="false"/>
+                              <struct name="interrupt_rx">
+                                 <setting name="IRQn" value="kQSCI0_RCV_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                              </struct>
+                              <setting name="enable_rx_err_irq" value="false"/>
+                              <struct name="interrupt_rx_err">
+                                 <setting name="IRQn" value="kQSCI0_RERR_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                              </struct>
+                              <setting name="enable_tridle_irq" value="false"/>
+                              <struct name="interrupt_tridle">
+                                 <setting name="IRQn" value="kQSCI0_TRIDLE_VECTORn"/>
+                                 <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                                 <setting name="enable_custom_name" value="false"/>
+                              </struct>
+                           </struct>
+                        </struct>
+                        <struct name="qsci_params"/>
+                     </config_set>
+                  </instance>
+                  <instance name="PIT0" uuid="65da8672-61f0-41ff-9cb3-f8cdbf4df260" type="pit_reg" type_id="pit_reg_6035bba38bcf2931406cb9b038081d5d" mode="PIT_GENERAL" peripheral="PIT0" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="pit_reg">
+                        <struct name="clock_config">
+                           <setting name="clockSource" value="kAltClock0"/>
+                           <setting name="clockSourceFreq" value="BOARD_BootClockRUN"/>
+                           <setting name="prescaler" value="p0"/>
+                           <setting name="modulo" value="50000"/>
+                        </struct>
+                        <setting name="slaveMode" value="false"/>
+                        <setting name="enableCounter" value="false"/>
+                        <setting name="enableRollOverInterruptSource" value="true"/>
+                        <setting name="enable_irq" value="true"/>
+                        <struct name="interrupt">
+                           <setting name="IRQn" value="kPIT0_ROLLOVR_VECTORn"/>
+                           <setting name="dsc_enable_interrrupt" value="iprVal1"/>
+                           <setting name="enable_custom_name" value="true"/>
+                           <setting name="handler_custom_name" value="PFC_VolCtrl_ISR"/>
+                        </struct>
+                        <struct name="pit_template_params"/>
+                     </config_set>
+                  </instance>
+                  <instance name="TMRA" uuid="06bf2f7d-3616-4ae1-a5f4-9efdb85b2c0d" type="qtmr_reg" type_id="qtmr_reg_19ff29c7d66f72ec59fde9c83852e6f9" mode="general" peripheral="TMRA" enabled="true" comment="" custom_name_enabled="false" editing_lock="false">
+                     <config_set name="generalConfig">
+                        <setting name="clockSource" value="BusInterfaceClock"/>
+                        <setting name="clockSourceFreq" value="ClocksTool_DefaultInit"/>
+                        <array name="enable_timer_channels">
+                           <struct name="0">
+                              <setting name="enableTimerChannel" value="true"/>
+                           </struct>
+                           <struct name="1">
+                              <setting name="enableTimerChannel" value="false"/>
+                           </struct>
+                           <struct name="2">
+                              <setting name="enableTimerChannel" value="false"/>
+                           </struct>
+                           <struct name="3">
+                              <setting name="enableTimerChannel" value="false"/>
+                           </struct>
+                        </array>
+                        <array name="input_filters">
+                           <struct name="0">
+                              <setting name="inputFilterPeriod" value="0"/>
+                              <setting name="inputFilterCount" value="3"/>
+                           </struct>
+                           <struct name="1">
+                              <setting name="inputFilterPeriod" value="0"/>
+                              <setting name="inputFilterCount" value="3"/>
+                           </struct>
+                           <struct name="2">
+                              <setting name="inputFilterPeriod" value="0"/>
+                              <setting name="inputFilterCount" value="3"/>
+                           </struct>
+                           <struct name="3">
+                              <setting name="inputFilterPeriod" value="0"/>
+                              <setting name="inputFilterCount" value="3"/>
+                           </struct>
+                        </array>
+                        <array name="qtmr_channels">
+                           <struct name="0">
+                              <setting name="channel" value="0"/>
+                              <struct name="channelConfig">
+                                 <setting name="primarySource" value="8"/>
+                                 <setting name="secondarySource" value="0"/>
+                                 <setting name="inputPolarity" value="false"/>
+                                 <setting name="inputFault" value="false"/>
+                                 <setting name="countingMode" value="1"/>
+                                 <setting name="enableCountOnce" value="false"/>
+                                 <setting name="countLength" value="0"/>
+                                 <setting name="inputAltLoad" value="false"/>
+                                 <setting name="countDirection" value="0"/>
+                                 <setting name="triggeredCountInit" value="0"/>
+                                 <setting name="enableMasterMode" value="false"/>
+                                 <setting name="enableExternalForce" value="false"/>
+                                 <setting name="enableCoChannelReinit" value="false"/>
+                                 <setting name="outputMode" value="0"/>
+                                 <setting name="forceOutputValue" value="false"/>
+                                 <setting name="forcedOutputValue" value="0"/>
+                                 <setting name="outputPolarity" value="false"/>
+                                 <setting name="outputEnabled" value="false"/>
+                                 <setting name="captureMode" value="0"/>
+                                 <setting name="reloadOnCapture" value="false"/>
+                                 <setting name="compare1Period" value="0"/>
+                                 <setting name="compareLoadControl1" value="0"/>
+                                 <setting name="compare2Period" value="0"/>
+                                 <setting name="compareLoadControl2" value="0"/>
+                                 <setting name="compareLoad1" value="0"/>
+                                 <setting name="compareLoad2" value="0"/>
+                                 <setting name="counterLoad" value="0"/>
+                                 <setting name="counterInit" value="0"/>
+                                 <setting name="debugMode" value="0"/>
+                                 <struct name="interruptSources">
+                                    <setting name="kQTMR_CompareInterruptEnable" value="false"/>
+                                    <setting name="kQTMR_Compare1InterruptEnable" value="false"/>
+                                    <setting name="kQTMR_Compare2InterruptEnable" value="false"/>
+                                    <setting name="kQTMR_OverflowInterruptEnable" value="false"/>
+                                    <setting name="kQTMR_EdgeInterruptEnable" value="false"/>
+                                 </struct>
+                                 <setting name="enable_irq" value="false"/>
+                                 <struct name="interrupt">
+                                    <setting name="IRQn" value="kTMRA_0_VECTORn"/>
+                                    <setting name="dsc_enable_interrrupt" value="iprVal0"/>
+                                    <setting name="enable_custom_name" value="false"/>
+                                 </struct>
+                                 <struct name="dma">
+                                    <setting name="kQTMR_InputEdgeFlagDmaEnable" value="false"/>
+                                    <setting name="kQTMR_ComparatorPreload1DmaEnable" value="false"/>
+                                    <setting name="kQTMR_ComparatorPreload2DmaEnable" value="false"/>
+                                 </struct>
+                              </struct>
+                              <struct name="template_params"/>
+                           </struct>
+                        </array>
+                        <struct name="qtmr_params"/>
+                     </config_set>
+                  </instance>
+               </instances>
+            </functional_group>
+         </functional_groups>
+         <components>
+            <component name="system" uuid="0f62615f-e107-4afe-8ab7-13ae4df23d9d" type_id="system_54b53072540eeeb8f8e9343e71f28176">
+               <config_set_global name="global_system_definitions">
+                  <setting name="user_definitions" value=""/>
+                  <setting name="user_includes" value=""/>
+                  <setting name="init_delay_enable" value="false"/>
+               </config_set_global>
+            </component>
+            <component name="msg" uuid="c20e589b-08dc-4afa-a5ef-faacc8dd9a9f" type_id="msg_6e2baaf3b97dbeef01c0043275f9a0e7">
+               <config_set_global name="global_messages"/>
+            </component>
+            <component name="generic_uart" uuid="42256ab4-747d-4cac-9ccb-f077824abc54" type_id="generic_uart_8cae00565451cf2346eb1b8c624e73a6">
+               <config_set_global name="global_uart"/>
+            </component>
+            <component name="generic_can" uuid="1bd6df0a-69a0-432b-8006-27a01a5e0f28" type_id="generic_can_1bfdd78b1af214566c1f23cf6a582d80">
+               <config_set_global name="global_can"/>
+            </component>
+            <component name="uart_cmsis_common" uuid="960fcbfd-b22a-45ef-a5e3-54cc99444696" type_id="uart_cmsis_common_9cb8e302497aa696fdbb5a4fd622c2a8">
+               <config_set_global name="global_USART_CMSIS_common" quick_selection="default"/>
+            </component>
+            <component name="generic_enet" uuid="e48cc793-79f6-44aa-a168-c4918086047b" type_id="generic_enet_74db5c914f0ddbe47d86af40cb77a619">
+               <config_set_global name="global_enet"/>
+            </component>
+            <component name="gpio_adapter_common" uuid="9c35a44e-ba35-452e-b587-cbc92d2c1790" type_id="gpio_adapter_common_57579b9ac814fe26bf95df0a384c36b6">
+               <config_set_global name="global_gpio_adapter_common" quick_selection="default"/>
+            </component>
+         </components>
+      </periphs>
+      <tee name="TEE" version="2.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
+         <tee_profile>
+            <processor_version>N/A</processor_version>
+         </tee_profile>
+      </tee>
+   </tools>
+</configuration>

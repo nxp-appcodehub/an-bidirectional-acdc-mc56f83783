@@ -1,0 +1,17 @@
+NXP Software Content Register
+
+Package:                   an-bidirectional-acdc-mc56f83783
+
+Version:                   1.0
+Outgoing License:          NXP LA_OPT_Online Code Hosting NXP_Software_License
+License File:              LICENSE.txt
+Type of content:           source code & object code & header file & linker files
+Description and comments:  This is a bidirectional ACDC reference design using MC56F83783 DSC.
+Release Location:          https://github.com/nxp-appcodehub/an-bidirectional-acdc-mc56f83783
+
+Origin:                    NXP (proprietary)
+                           NXP (BSD-3-Clause)
+
+
+
+                           
